@@ -1,16 +1,14 @@
-import React from 'react'
 
 function Contact() {
   return (
-    <section className="py-20 pt-36 container mx-auto px-4"> {/* pt-36 to offset navbar */}
+    <section className="py-20 pt-36 container mx-auto px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold">Get in Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white" >Get in Touch</h2>
         <p className="text-lg text-gray-400">We'd love to hear from you.</p>
       </div>
       <div className="max-w-3xl mx-auto">
         <form className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Full Name */}
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
               <input 
@@ -20,7 +18,6 @@ function Contact() {
                 required 
               />
             </div>
-            {/* Email Address */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
               <input 
@@ -32,7 +29,6 @@ function Contact() {
             </div>
           </div>
           
-          {/* Department */}
           <div>
             <label htmlFor="department" className="block text-sm font-medium text-gray-300 mb-2">Department</label>
             <select 
@@ -46,7 +42,6 @@ function Contact() {
             </select>
           </div>
 
-          {/* Message */}
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
             <textarea 
@@ -57,7 +52,6 @@ function Contact() {
             ></textarea>
           </div>
 
-          {/* Newsletter */}
           <div className="flex items-center">
             <input 
               id="newsletterSwitch" 
@@ -70,7 +64,6 @@ function Contact() {
             </label>
           </div>
 
-          {/* Submit Button */}
           <div className="text-center pt-4">
             <button 
               type="submit" 

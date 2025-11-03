@@ -1,32 +1,66 @@
-import React from 'react'
+
 import Header from './components/Header'
 import Footer from './components/Footer'
-import { BrowserRouter, Route,Routes } from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About'
-import Login from './components/Login'
-import Signup from './components/Signup'
-import Contact from './components/Contact' // Import Contact
-import Cart from './components/Cart' // Import Cart
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import Contact from './pages/Contact'
+import Cart from './pages/Cart'
+
+import ProtectedRoute from './components/ProtectedRoute'
+import PublicOnlyRoute from './components/PublicOnlyRoute'
+import Board from './pages/Board'
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* min-h-screen ensures the footer stays at the bottom */}
       <div className="flex flex-col min-h-screen">
+          
+         <div
+        className="absolute inset-x-0 top-0 z-0 pointer-events-none"
+        style={{
+          height: '100vh',
+          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(168, 165, 255, 0.20), transparent 70%)",
+        }}
+      />
         <Header />
-        {/* flex-grow allows the main content to take up available space */}
         <main className='flex-grow'>
           <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/about' element={<About/>}/>
-            <Route path='/contact' element={<Contact/>}/> {/* Add Contact route */}
-            <Route path='/cart' element={<Cart/>}/> {/* Add Cart route */}
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/register' element={<Signup/>}/>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/cart' element={<Cart />} />
+
+            <Route
+              path='/login'
+              element={
+                <PublicOnlyRoute>
+                  <Login />
+                </PublicOnlyRoute>
+              }
+            />
+            <Route
+              path='/register'
+              element={
+                <PublicOnlyRoute>
+                  <Signup />
+                </PublicOnlyRoute>
+              }
+            />
+            <Route
+              path='/board'
+              element={
+                <ProtectedRoute>
+                  <Board />
+                </ProtectedRoute>
+              }
+            />
+            
           </Routes>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </BrowserRouter>
   )

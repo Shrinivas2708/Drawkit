@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
 function Signup() {
@@ -9,7 +9,6 @@ function Signup() {
           Create Your Account
         </h2>
         <form className="space-y-6">
-          {/* Full Name Input */}
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name
@@ -21,7 +20,6 @@ function Signup() {
               required
             />
           </div>
-          {/* Email Input */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address
@@ -33,7 +31,6 @@ function Signup() {
               required
             />
           </div>
-          {/* Password Input */}
           <div>
             <label htmlFor="password"className="block text-sm font-medium text-gray-300 mb-2">
               Password
@@ -45,8 +42,6 @@ function Signup() {
               required
             />
           </div>
-
-          {/* Submit Button */}
           <div>
             <button
               type="submit"
