@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { BarChart, ShieldCheck, FileText, Globe, Palette, Users, Bell, Mail, Settings } from 'lucide-react';
 
 const useResponsiveCards = () => {

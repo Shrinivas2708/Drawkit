@@ -25,6 +25,8 @@ function Header() {
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
             <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+            
+          <Link to="/cart" className="block py-2 text-gray-300 hover:text-white">Cart</Link>
             {isLoggedIn && (
               <Link to="/board" className="text-gray-300 hover:text-white transition-colors">My Board</Link>
             )}

@@ -2,8 +2,7 @@
 import { Link } from 'react-router-dom';
 import FeatureCarousel from '../components/FeatureCarousel';
 import FAQ from '../components/FAQ';
-
-const HeroImg = "https://placehold.co/600x400/121212/a8a5ff/png?text=DrawKit+App";
+import HeroImg from '/landing.png'
 
 function Home() {
   return (
